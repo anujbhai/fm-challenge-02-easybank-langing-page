@@ -1,0 +1,27 @@
+@use "../util" as utl;
+
+:root {
+  /*
+   * Colors
+   */
+  // Fonts
+  --font-heading: #{ clamp(utl.rem(40), 2.147887323943662rem + 1.5023474178403755vw, utl.rem(56)) };
+  --font-subheading: #{ clamp(utl.rem(32), 1.823943661971831rem + 0.7511737089201878vw, utl.rem(40)) };
+   --font-section-title: #{ clamp(utl.rem(20), 1.5880281690140845rem + -0.3755868544600939vw, utl.rem(24)) };
+   --font-section-tagline: #{ clamp(utl.rem(15), 1.1910211267605635rem + -0.2816901408450704vw, utl.rem(18)) };
+   --font-article-subheading: #{ utl.rem(16) };
+   --font-content: #{ utl.rem(15) };
+   --font-button: #{ utl.rem(14) };
+   --font-article-desc: #{ utl.rem(13) };
+  
+  // Primary
+  --darkblue: hsl(233, 26%, 24%);
+  --limegreen: hsl(158, 61%, 49%);
+  --brightcyan: hsl(192, 70%, 51%);
+
+  // Neutral
+  --grayishblue: hsl(233, 8%, 62%);
+  --litegrayishblue: hsl(220, 16%, 96%);
+  --verylitegray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}

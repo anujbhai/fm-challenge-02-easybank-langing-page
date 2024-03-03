@@ -1,0 +1,71 @@
+@use '../util' as utl;
+@import './mixins';
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3rem;
+  font-size: utl.rem(18);
+  font-family: "Public Sans", sans-serif;
+  color: var(--grayishblue);
+}
+
+a {
+  color: var(--grayishblue);
+  text-decoration: none;
+}
+
+a:hover, a:visited {
+  color: var(--darkblue);
+}
+
+.flex {
+  display: flex;
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+// Buttons
+button,
+.button {
+  padding: 14px 32px;
+  font-size: var(--font-button);
+  font-weight: 700;
+  color: var(--white);
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, var(--limegreen), var(--brightcyan));
+}
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoint-down(large) {
+    display: none;
+  }
+}
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}

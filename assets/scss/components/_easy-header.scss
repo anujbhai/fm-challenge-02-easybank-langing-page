@@ -1,0 +1,26 @@
+@use '../util/functions' as utl;
+@use '../globals';
+
+.easy-header {
+
+  nav {
+    padding: 22px 24px;
+    font-size: var(--font-button);
+  }
+
+  &__logo {}
+
+  &__menu {
+
+    > span {
+      display: block;
+      width: 24px;
+      height: 1px;
+      background-color: var(--darkblue);
+
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
