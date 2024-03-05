@@ -19,12 +19,14 @@
 </head>
 <body>
   <header class="easy-header">
-    <nav class="flex flex-jc-sb flex-ai-c">
+    <div class="overlay has-fade"></div>
+
+    <nav class="flex flex-jc-sb flex-ai-c container">
       <a href="/" class="easy-header__logo">
         <img src="public/img/logo.svg" alt="Easybank">
       </a>
 
-      <a href="/" class="easy-header__menu hide-for-desktop">
+      <a id="btnHamburger" href="/" class="easy-header__toggle hide-for-desktop">
         <span></span>
         <span></span>
         <span></span>
@@ -42,26 +44,28 @@
     </nav>
   </header>
 
+  <div class="easy-header__menu has-fade">
+    <a href="http://">Home</a>
+    <a href="http://">About</a>
+    <a href="http://">Contact</a>
+    <a href="http://">Blog</a>
+    <a href="http://">Careers</a>
+  </div>
+
+  <section class="easy-hero">
+    <div class="easy-hero__image"></div>
+
+    <div class="easy-hero__text container">
+      <h2>Next generation digital banking</h2>
+      <p>
+        Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
+      </p>
+
+      <button type="button">Request invite</button>
+    </div>
+  </section>
+
   <!--
-  Home
-  About
-  Contact
-  Blog
-  Careers
-
-  Request Invite
-
-
-
-  Next generation digital banking
-
-  Take your financial life online. Your Easybank account will be a one-stop-shop 
-  for spending, saving, budgeting, investing, and much more.
-
-  Request Invite
-
-
-
   Why choose Easybank?
 
   We leverage Open Banking to turn your bank account into your financial hub. Control 
@@ -125,7 +129,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Anuj Upadhyay</a>.
   </div>
-
+  
   <script src="src/js/script.js"></script>
 </body>
 </html>

@@ -19,11 +19,16 @@ body {
   font-size: utl.rem(18);
   font-family: "Public Sans", sans-serif;
   color: var(--grayishblue);
+
+  &.noscroll {
+    overflow: hidden;
+  }
 }
 
 a {
   color: var(--grayishblue);
   text-decoration: none;
+  transition: color 200ms ease-in-out;
 }
 
 a:hover, a:visited {
@@ -56,6 +61,13 @@ button,
   border-radius: 25px;
   border: none;
   background: linear-gradient(135deg, var(--limegreen), var(--brightcyan));
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 // Visibility
@@ -68,4 +80,8 @@ button,
   @include breakpoint-up(large) {
     display: none;
   }
+}
+
+.container {
+  padding-inline: utl.rem(24);
 }
