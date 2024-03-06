@@ -55,6 +55,7 @@ a:hover, a:visited {
 button,
 .button {
   padding: 14px 32px;
+  font-family: "Public Sans", sans-serif;
   font-size: var(--font-button);
   font-weight: 700;
   color: var(--white);
@@ -83,5 +84,11 @@ button,
 }
 
 .container {
-  padding-inline: utl.rem(24);
+  max-width: utl.rem(1110);
+  margin-inline: auto;
+  margin-block: 0;
+
+  &--px {
+    padding-inline: utl.rem(24);
+  }
 }
