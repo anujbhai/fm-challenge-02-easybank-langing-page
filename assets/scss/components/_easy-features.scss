@@ -4,32 +4,12 @@
 .easy-features {
   background-color: var(--litegrayishblue);
   padding-block-start: utl.rem(63);
+  padding-block-end: utl.rem(40);
   margin-block-start: utl.rem(-22);
 
   @include mixin.breakpoint-up(large) {
     padding-block-start: utl.rem(96);
-  }
-
-  h2, p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-
-    @include mixin.breakpoint-up(large) {
-      text-align: left;
-    }
-  }
-
-  h2 {
-    font-size: var(--font-subheading);
-    font-weight: 300;
-    color: var(--darkblue);
-    line-height: normal;
-    margin-block-end: utl.rem(16);
-
-    @include mixin.breakpoint-up(large) {
-      line-height: utl.rem(64);
-    }
+    padding-block-end: utl.rem(62);
   }
 
   p {
@@ -37,13 +17,13 @@
     font-weight: 400;
     color: var(--grayishblue);
     line-height: utl.rem(25);
-    letter-spacing: utl.rem(0.2);
+    letter-spacing: utl.rem(-0.2);
     margin-block-end: utl.rem(56);
 
     @include mixin.breakpoint-up(large) {
       line-height: utl.rem(28);
       margin-block-end: utl.rem(72);
-      width: 60%;
+      width: 62%;
     }
   }
 
@@ -57,10 +37,11 @@
   &__item {
     flex: 1;
     text-align: center;
+    margin-block-end: utl.rem(32);
 
     @include mixin.breakpoint-up(large) {
       text-align: left;
-      padding-inline: utl.rem(15);
+      padding-inline: utl.rem(14);
 
       &:first-child {
         padding-inline-start: 0;
@@ -72,9 +53,47 @@
     }
   }
 
-  &__icon {}
+  &__icon {
+    margin-block-end: utl.rem(24);
 
-  &__title {}
+    @include mixin.breakpoint-up(large) {
+      margin-block-end: utl.rem(40);
+    }
+  }
 
-  &__desc {}
+  &__title {
+    margin-block-end: utl.rem(16);
+
+    @include mixin.breakpoint-up(large) {
+      margin-block-end: utl.rem(26);
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 300;
+      font-size: var(--font-section-title);
+      color: var(--darkblue);
+      line-height: utl.rem(28);
+      letter-spacing: utl.rem(-0.3);
+
+      @include mixin.breakpoint-up(large) {
+        letter-spacing: utl.rem(-0.4);
+      }
+    }
+  }
+
+  &__desc {
+    p {
+      margin: 0;
+      font-size: var(--font-content);
+      width: auto;
+      line-height: utl.rem(25);
+      letter-spacing: utl.rem(-0.2);
+
+      @include mixin.breakpoint-up(large) {
+        // font-size: var(--font-article-subheading);
+        line-height: utl.rem(26);
+      }
+    }
+  }
 }

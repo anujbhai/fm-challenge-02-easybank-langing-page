@@ -1,0 +1,44 @@
+@use '../util' as utl;
+@use '../globals/mixins' as mixin;
+
+.easy-articles {
+  background-color: var(--verylitegray);
+  padding-block: utl.rem(88);
+
+  @include mixin.breakpoint-up(large) {
+    padding-block: utl.rem(80);
+  }
+
+  &__grid {
+    display: grid;
+    grid-gap: utl.rem(30);
+    grid-template-columns: repeat(auto-fit, minmax(utl.rem(255), 1fr));
+
+    @include mixin.breakpoint-up(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__card {
+    
+    p {
+      text-align: left;
+    }
+  }
+
+  &__image {
+    height: utl.rem(200);
+    background-size: 105%;
+    background-position: 80% 60%;
+  }
+
+  &__text {
+    padding-inline: utl.rem(30);
+    padding-block: utl.rem(30);
+    background-color: var(--white);
+  }
+
+  &__title {}
+
+  &__desc {}
+}

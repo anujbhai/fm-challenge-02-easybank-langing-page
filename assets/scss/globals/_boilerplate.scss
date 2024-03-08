@@ -25,6 +25,30 @@ body {
   }
 }
 
+h2, p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  @include mixin.breakpoint-up(large) {
+    text-align: left;
+  }
+}
+
+h2 {
+  font-size: var(--font-subheading);
+  font-weight: 300;
+  color: var(--darkblue);
+  line-height: normal;
+  letter-spacing: utl.rem(-0.5);
+  margin-block-end: utl.rem(16);
+
+  @include mixin.breakpoint-up(large) {
+    line-height: utl.rem(64);
+    letter-spacing: utl.rem(-0.7);
+  }
+}
+
 a {
   color: var(--grayishblue);
   text-decoration: none;
