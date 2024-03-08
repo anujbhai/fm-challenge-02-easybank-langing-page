@@ -1,12 +1,12 @@
 @use '../util' as utl;
-@import '../globals/mixins';
+@use '../globals/mixins' as mixin;
 
 .easy-hero {
   background-color: var(--verylitegray);
   // overflow-x: hidden;
   // overflow-y: visible;
 
-  @include breakpoint-up(large) {
+  @include mixin.breakpoint-up(large) {
 
     .container {
       display: flex;
@@ -22,7 +22,7 @@
     background-position: center center;
     height: utl.rem(270);
 
-    @include breakpoint-up(large) {
+    @include mixin.breakpoint-up(large) {
       flex: 3;
       order: 2;
       height: utl.rem(655);
@@ -41,7 +41,7 @@
       background-repeat: no-repeat;
       background-position: center bottom;
 
-      @include breakpoint-up(large) {
+      @include mixin.breakpoint-up(large) {
         width: utl.rem(1271);
         background-size: 92%;
         background-position: 0% 83%;
@@ -58,7 +58,7 @@
       background-repeat: no-repeat;
       background-position: center bottom;
 
-      @include breakpoint-up(large) {
+      @include mixin.breakpoint-up(large) {
         width: 115%;
         height: 118%;
         left: 26%;
@@ -72,7 +72,7 @@
     text-align: center;
     padding-block: utl.rem(40);
 
-    @include breakpoint-up(large) {
+    @include mixin.breakpoint-up(large) {
       flex: 2;
       order: 1;
       text-align: left;

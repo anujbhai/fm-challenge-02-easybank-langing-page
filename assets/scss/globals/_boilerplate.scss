@@ -1,5 +1,5 @@
 @use '../util' as utl;
-@import './mixins';
+@use './mixins' as mixin;
 
 html {
   font-size: 100%;
@@ -22,6 +22,30 @@ body {
 
   &.noscroll {
     overflow: hidden;
+  }
+}
+
+h2, p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  @include mixin.breakpoint-up(large) {
+    text-align: left;
+  }
+}
+
+h2 {
+  font-size: var(--font-subheading);
+  font-weight: 300;
+  color: var(--darkblue);
+  line-height: normal;
+  letter-spacing: utl.rem(-0.5);
+  margin-block-end: utl.rem(16);
+
+  @include mixin.breakpoint-up(large) {
+    line-height: utl.rem(64);
+    letter-spacing: utl.rem(-0.7);
   }
 }
 
@@ -73,12 +97,12 @@ button,
 
 // Visibility
 .hide-for-mobile {
-  @include breakpoint-down(large) {
+  @include mixin.breakpoint-down(large) {
     display: none;
   }
 }
 .hide-for-desktop {
-  @include breakpoint-up(large) {
+  @include mixin.breakpoint-up(large) {
     display: none;
   }
 }
