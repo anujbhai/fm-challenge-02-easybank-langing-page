@@ -85,7 +85,9 @@
         transition: width 300ms ease-in-out;
       }
 
-      &:hover {
+      &:hover,
+      &:visited {
+        color: var(--darkblue);
 
         &::before {
           width: 100%;

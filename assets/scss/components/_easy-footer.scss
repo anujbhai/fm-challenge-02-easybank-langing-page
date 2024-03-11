@@ -1,0 +1,25 @@
+@use '../util' as utl;
+@use '../globals/mixins' as mixin;
+
+.easy-footer {
+  background-color: var(--darkblue);
+  color: var(--white);
+
+  &__social {
+    a {
+      // color: var(--white);
+
+      svg {
+        fill: var(--white);
+      }
+
+      &:hover {
+        // color: var(--limegreen);
+
+        svg {
+          fill: var(--limegreen);
+        }
+      }
+    }
+  }
+}

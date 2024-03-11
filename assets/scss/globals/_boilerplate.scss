@@ -19,6 +19,7 @@ body {
   font-size: utl.rem(18);
   font-family: "Public Sans", sans-serif;
   color: var(--grayishblue);
+  overflow-x: hidden;
 
   &.noscroll {
     overflow: hidden;
@@ -53,10 +54,10 @@ a {
   color: var(--grayishblue);
   text-decoration: none;
   transition: color 200ms ease-in-out;
-}
 
-a:hover, a:visited {
-  color: var(--darkblue);
+  svg {
+    transition: fill 200ms ease-in-out;
+  }
 }
 
 .flex {
