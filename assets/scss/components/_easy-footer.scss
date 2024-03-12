@@ -4,22 +4,63 @@
 .easy-footer {
   background-color: var(--darkblue);
   color: var(--white);
+  padding-block-start: utl.rem(40);
+  text-align: center;
+
+  @include mixin.breakpoint-up(large) {
+    padding-block-start: utl.rem(48);
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-block-end: utl.rem(32);
+  }
 
   &__social {
+    margin-block-end: utl.rem(32);
+
+
     a {
-      // color: var(--white);
 
       svg {
         fill: var(--white);
       }
 
       &:hover {
-        // color: var(--limegreen);
 
         svg {
           fill: var(--limegreen);
         }
       }
+    }
+  }
+
+  &__links {
+
+    a {
+      color: var(--white);
+      display: block;
+      margin-block-end: utl.rem(8);
+
+      &:hover {
+        color: var(--limegreen);
+      }
+    }
+
+    &.col2 {
+      margin-block-end: utl.rem(32);
+    }
+  }
+
+  &__cta {
+    margin-block-end: utl.rem(32);
+
+    button {
+      margin-block-end: utl.rem(32);
+    }
+
+    p {
+      color: var(--grayishblue);
     }
   }
 }
