@@ -26,6 +26,7 @@
     background-color: var(--white);
     padding-block: utl.rem(22);
     font-size: var(--font-button);
+    z-index: 2;
   }
 
   &__logo {
@@ -60,6 +61,7 @@
     padding-block: utl.rem(20);
     border-radius: utl.rem(4);
     margin-block-start: utl.rem(24);
+    z-index: 1;
 
     a {
       display: block;
@@ -107,6 +109,7 @@
   top: 0; bottom: 0; left: 0; right: 0;
   background: var(--darkblue);
   background: linear-gradient(0deg, hsla(233, 26%, 24%, 0.01) 0%, var(--darkblue) 100%);
+  z-index: 1;
 
   .fade-in {
     display: block;
